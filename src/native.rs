@@ -39,8 +39,8 @@ pub struct Context {
    pub raw: ngl::GlFns,
    pub version: Version,
    pub extensions: HashSet<String>,
-   pub constants: Constants,
-   pub debug_callback: Option<DebugCallbackRawPtr>,
+   //pub constants: Constants,
+   //pub debug_callback: Option<DebugCallbackRawPtr>,
 }
 
 pub enum ContextInitError {
@@ -55,8 +55,8 @@ impl Context {
          raw,
          version,
          extensions: HashSet::new(),
-         constants: Constants::default(),
-         debug_callback: None,
+         //constants: Constants::default(),
+         //debug_callback: None,
       }
    }
    pub fn load<F: FnMut(&str) -> *const c_void>(
@@ -104,10 +104,10 @@ impl Context {
 
          // After the extensions are known, we can populate constants (including
          // constants that depend on extensions being enabled)
-         context.constants.max_label_length = match context.supports_debug() {
-            true => context.get_parameter_i32(MAX_LABEL_LENGTH),
-            false => 0,
-         };
+         //context.constants.max_label_length = match context.supports_debug() {
+         //   true => context.get_parameter_i32(MAX_LABEL_LENGTH),
+         //   false => 0,
+         //};
          Ok(context)
       }
    }
