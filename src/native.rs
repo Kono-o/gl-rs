@@ -147,11 +147,11 @@ impl Context {
    }
 }
 
-impl Debug for Context {
-   fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-      write!(f, "Native_GL_Context")
-   }
-}
+//impl Debug for Context {
+//   fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
+//      write!(f, "Native_GL_Context")
+//   }
+//}
 
 fn non_zero_gl_name(value: ngl::GLuint) -> NonZeroU32 {
    NonZeroU32::new(value as u32).expect("expected non-zero GL name")
