@@ -39,8 +39,8 @@ pub struct Context {
    pub raw: ngl::GlFns,
    pub version: Version,
    pub extensions: HashSet<String>,
-   constants: Constants,
-   debug_callback: Option<DebugCallbackRawPtr>,
+   pub constants: Constants,
+   pub debug_callback: Option<DebugCallbackRawPtr>,
 }
 
 pub enum ContextInitError {
