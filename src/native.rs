@@ -46,7 +46,6 @@ pub struct Context {
 pub enum ContextInitError {
    NoActiveContext,
    CouldParseVersion(String),
-   CStringFailed,
 }
 
 impl Context {
